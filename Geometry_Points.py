@@ -2,7 +2,9 @@
 #Author:  Nadia Barbosa
 
 
-# [1]
+# [1] Creates a generic base class named Geometry that will be used
+#     to organized any type of geometry object (such as point, line, or polygon). 
+#     Assumes that all geometry objects should have a unique ID.
 
 class Geometry(object): #initial class
     count = 0
@@ -11,7 +13,8 @@ class Geometry(object): #initial class
         print self.uniqueID
         Geometry.count = Geometry.count +1
         
-# [2]
+# [2] Creates a class named Point that stores and implements a 2-D geographic point.
+#     Point class should inherit the Geometry class, having an ID, x, and y coordinates.
 
 class Point(Geometry): #subclass for points
     def __init__(self, x, y):
@@ -38,12 +41,14 @@ class Point(Geometry): #subclass for points
         import math
         dist = math.sqrt(((self.x-otherpoint.x)**2)+((self.y-otherpoint.y)**2))
         return dist           
-    
-
         
 #-----------------------------------------
     
-#[3]
+#[3] Write a test program that creates three points, (5,3), (2,7) and (2,7), and performs the following tasks for each point:
+#       - Prints the id and x,y coordinates of each point onto the screen
+#       - Calculate and display the distance between each set of points
+#       - Test the equality method between each set of points
+#       - Test the identify method between each set of points
     
 def main(): #calls classes and method to print script on colsole
 
@@ -71,11 +76,3 @@ def main(): #calls classes and method to print script on colsole
     print "   Between P2 & P3: " + str(P2.distance(P3))
    
 main()
-    
-
-
-
-        
-
-
-
