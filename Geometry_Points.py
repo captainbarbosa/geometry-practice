@@ -14,7 +14,7 @@ class Geometry(object): #initial class
         Geometry.count = Geometry.count +1
         
 # [2] Creates a class named Point that stores and implements a 2-D geographic point.
-#     Point class should inherit the Geometry class, having an ID, x, and y coordinates.
+#     Point class inherits the Geometry class, having an ID, x, and y coordinates.
 
 class Point(Geometry): #subclass for points
     def __init__(self, x, y):
@@ -44,11 +44,11 @@ class Point(Geometry): #subclass for points
         
 #-----------------------------------------
     
-#[3] Write a test program that creates three points, (5,3), (2,7) and (2,7), and performs the following tasks for each point:
+#[3] Writes a test program that creates three points, (5,3), (2,7) and (2,7), and performs the following tasks for each point:
 #       - Prints the id and x,y coordinates of each point onto the screen
-#       - Calculate and display the distance between each set of points
-#       - Test the equality method between each set of points
-#       - Test the identify method between each set of points
+#       - Calculates and displays the distance between each set of points
+#       - Tests the equality method between each set of points
+#       - Tests the identify method between each set of points
     
 def main(): #calls classes and method to print script on colsole
 
